@@ -390,7 +390,7 @@ func TestCSIVolumeChecker(t *testing.T) {
 	}
 
 	for i, c := range cases {
-		checker.SetVolumes(c.RequestedVolumes)
+		checker.SetVolumes("group.task[0]", c.RequestedVolumes)
 		if act := checker.Feasible(c.Node); act != c.Result {
 			t.Fatalf("case(%d) failed: got %v; want %v", i, act, c.Result)
 		}

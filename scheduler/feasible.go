@@ -227,15 +227,23 @@ func (c *CSIVolumeChecker) SetNamespace(namespace string) {
 	c.namespace = namespace
 }
 
-func (c *CSIVolumeChecker) SetVolumes(volumes map[string]*structs.VolumeRequest) {
+func (c *CSIVolumeChecker) SetVolumes(allocName string, volumes map[string]*structs.VolumeRequest) {
+
 	xs := make(map[string]*structs.VolumeRequest)
+
 	// Filter to only CSI Volumes
 	for alias, req := range volumes {
 		if req.Type != structs.VolumeTypeCSI {
 			continue
 		}
-
-		xs[alias] = req
+		if req.PerAlloc {
+			// provide a unique volume source per allocation
+			copied := req.Copy()
+			copied.Source = copied.Source + structs.AllocSuffix(allocName)
+			xs[alias] = copied
+		} else {
+			xs[alias] = req
+		}
 	}
 	c.volumes = xs
 }
