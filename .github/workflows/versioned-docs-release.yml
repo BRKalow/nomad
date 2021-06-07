@@ -23,7 +23,7 @@ jobs:
         env:
           HC_AWS_ACCESS_KEY_ID: ${{ secrets.HC_AWS_ACCESS_KEY_ID }}
           HC_AWS_SECRET_ACCESS_KEY: ${{ secrets.HC_AWS_SECRET_ACCESS_KEY }}
-        run: npx -p @hashicorp/versioned-docs-release $GITHUB_REF $GITHUB_SHA ${{ github.event.repository.name }} content
+        run: npx -p @hashicorp/versioned-docs versioned-docs-release $GITHUB_REF $GITHUB_SHA ${{ github.event.repository.name }} content
       - name: Commit version-manifest
         uses: EndBug/add-and-commit@v7
         with:
