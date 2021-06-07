@@ -1,6 +1,9 @@
 name: Versioned Docs Sync
 
-on: push
+on:
+  push:
+    branches:
+      - 'release-*'
 
 jobs:
   sync-versioned-content:
