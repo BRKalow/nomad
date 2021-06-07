@@ -1,0 +1,17 @@
+[
+  {
+    "display": "v1.1.0",
+    "slug": "v1.1.x",
+    "ref": "release-1.1.0"
+  },
+  {
+    "display": "v1.0.x",
+    "slug": "v1.0.x",
+    "ref": "release-1.0.6"
+  },
+  {
+    "display": "v0.12.x",
+    "slug": "v0.12.x",
+    "ref": "v0.12.12"
+  }
+]
