@@ -7,7 +7,7 @@ on:
       - 'release-*'
 
 jobs:
-  ingest-latest-version:
+  sync-versioned-content:
     runs-on: ubuntu-latest
     defaults:
       run:
