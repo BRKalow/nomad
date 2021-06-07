@@ -4,7 +4,7 @@ name: Versioned Docs Sync
 on:
   push:
     branches:
-      - release-*
+      - 'release-*'
 
 jobs:
   ingest-latest-version:
