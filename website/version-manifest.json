@@ -1,8 +1,8 @@
 [
   {
-    "display": "v1.1.0",
-    "slug": "v1.1.x",
-    "ref": "release-1.1.0"
+    "display": "v1.1.1",
+    "slug": "v1.1.1",
+    "ref": "refs/tags/v1.1.1"
   },
   {
     "display": "v1.0.x",
