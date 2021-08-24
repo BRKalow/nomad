@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "packages": {
+    "@hashicorp/versioned-docs": {
+      "signature": "f37ed44fa426335460d9afa109ec136f",
+      "file": true,
+      "replaced": "0.0.19"
+    },
+    "@hashicorp/react-docs-page": {
+      "signature": "dd0649aaf7d764739dc6b55b38ac6bc1",
+      "file": true,
+      "replaced": "^13.5.1"
+    }
+  }
+}

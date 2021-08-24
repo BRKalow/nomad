@@ -26,8 +26,10 @@ export async function getStaticPaths() {
   return {
     fallback: false,
     paths: await generateStaticPaths({
+      product: { name: productName, slug: productSlug },
       navDataFile: NAV_DATA_FILE,
       localContentDir: CONTENT_DIR,
+      basePath,
     }),
   }
 }
@@ -40,6 +42,7 @@ export async function getStaticProps({ params }) {
       product: { name: productName, slug: productSlug },
       params,
       additionalComponents,
+      basePath,
     }),
   }
 }
